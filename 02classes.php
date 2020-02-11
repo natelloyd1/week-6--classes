@@ -5,18 +5,18 @@ declare(strict_types=1);
 class Light {
     private $turnOn;
     private $turnOff;
+    private $isOn;
 
-    public function __construct(string $turnOff, string $turnOn)
+    public function __construct(string $turnOff, string $turnOn, string $isOn)
     {
         $this->turnOff = $turnOff;
         $this->turnOn = $turnOn;
+        $this->isOn = $isOn;
     }
-
     public function turnOff() : string 
     {
       return $this->turnOff;
     }
-
     public function turnOn() : string 
     {
       return $this->turnOff;
