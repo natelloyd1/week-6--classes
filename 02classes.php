@@ -2,24 +2,23 @@
 
 declare(strict_types=1);
 
-class Light {
-    private $turnOn;
-    private $turnOff;
-    private $isOn;
+class LightSwitch {
 
-    public function __construct(string $turnOff, string $turnOn, string $isOn)
+    private $on = false; 
+
+    public function turnOn () : void 
     {
-        $this->turnOff = $turnOff;
-        $this->turnOn = $turnOn;
-        $this->isOn = $isOn;
+        $this->on = true;
     }
-    public function turnOff() : string 
+
+    public function turnOff() : void 
     {
-      return $this->turnOff;
+        $this->on = false;
     }
-    public function turnOn() : string 
+
+    public function isOn() : bool
     {
-      return $this->turnOff;
+      return $this->on;
     }
 };
 
