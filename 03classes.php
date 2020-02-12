@@ -4,24 +4,34 @@ declare(strict_types=1);
 
 class Car {
 
-    public function __construct(string $getNumberplate, string $getMake, string $getMileage)
+    private $make;
+    private $mileage = 0; 
+    private $numberPlate; 
+  
+    public function __construct(string $mk, string $np)
     {
-        $this->getNumberplate = $getNumberplate;
-        $this->getMake = $getMake;
-        $this->getMileage = $getMileage; 
+        $this->numberPlate = $np;
+        $this->make = $mk; 
     }
+
     public function getNumberplate() : string 
     {
-      return $this->getNumberplate;
+      return $this->numberPlate;
     }
 
     public function getMake() : string 
     {
-      return $this->getMake;
+      return $this->make;
     }
-    public function getMileage() : string 
+
+    public function getMileage() : int 
     {
-      return $this->getMileage;
+      return $this->mileage;
+    }
+
+    public function addJourney($miles) : void
+    {
+      $this->mileage += $miles;
     }
 };
 
