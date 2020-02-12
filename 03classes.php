@@ -2,16 +2,15 @@
 
 declare(strict_types=1);
 
-// ... your class here
 class Car {
 
-    public function __construct(string $make, string $model)
+    public function __construct(string $getNumberplate, string $getMake, string $getMileage)
     {
         $this->getNumberplate = $getNumberplate;
         $this->getMake = $getMake;
         $this->getMileage = $getMileage; 
     }
-    public function getNumberplate () : string 
+    public function getNumberplate() : string 
     {
       return $this->getNumberplate;
     }
@@ -24,9 +23,7 @@ class Car {
     {
       return $this->getMileage;
     }
-
-
-}
+};
 
 // you pass in a make and number plate
 $car = new Car("Ford", "XY11 4TY");
